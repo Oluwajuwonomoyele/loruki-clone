@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+:root {
+    --primary: #047aed;
+    --black: #333;
+    --white: #fff; 
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--black);
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+p {
+    margin: 10px 0;
+}
+img {
+    width: 100%;
+}
+
+
+/* navigation bar styling */
+.navbar {
+    background-color: #047aed;
+    color: var(--white);
+    height: 70px;
+}
+.navbar .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul {
+    display: flex;
+    gap: 30px
+}
+.navbar ul a {
+    padding: 10px;
+    color: var(--white);
+    position: relative;
+}
+.navbar ul a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--white);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.navbar ul a:hover::after {
+    height: 2px;
+}
+
+/* hero section styling */
+.hero {
+    height: 500px;
+    background-color: var(--primary);
+    color: var(--white);
+    position: relative;
+}
+.hero .grid {
+    width: 100%;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+    overflow: visible;
+}
+.hero .hero-text h1 {
+    font-size: 40px;
+}
+.hero .hero-text p {
+    margin: 20px 0;
+}
+.hero .hero-form {
+    position: relative;
+    top: 120px;
+    height: 350px;
+    width: 400px;
+    justify-self: flex-end;
+    z-index: 100;
+}
+.hero .hero-form .form-base {
+    margin: 30px 0;
+}
+.hero .hero-form .form-base input[type='text'],
+.hero .hero-form .form-base input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    font-size: 16px;
+    padding: 3px;
+}
+.hero .hero-form .form-base input[type='text']:focus,
+.hero .hero-form .form-base input[type='email']:focus {
+    outline: none;
+}
+.hero::before,
+.hero::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background-color: var(--white);
+    transform: skewY(-3deg);
+    --webkit-transform: skewY(-3deg);
+    --moz-transform: skewY(-3deg);
+    --ms-transform: skewY(-3deg);
+
+}
