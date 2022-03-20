@@ -5,6 +5,8 @@
     --light-grey: #f4f4f4;
     --black: #333;
     --white: #fff; 
+    --success: #5cb85c;
+    --error: #d9534f;
 }
 .container {
     max-width: 1440px;
@@ -63,7 +65,25 @@
 }
 .bg-dark {
     background-color: var(--secondary);
+    color: var(--white);
 }
+.alert {
+    background-color: var(--light-grey);
+    padding: 10px 20px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+.alert i {
+    margin-right: 10px;
+}
+.alert-success {
+    background-color: var(--success);
+    color: white;
+}
+.text-primary {
+    color: var(--primary);
+}
+
 
 /* margin */
 .my-1 {
