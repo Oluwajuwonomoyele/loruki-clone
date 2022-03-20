@@ -165,3 +165,8 @@
 .xl {
     font-size: 4rem;
 }
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}

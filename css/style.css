@@ -123,6 +123,11 @@ pre, code {
     gap: 30px;
     overflow: visible;
 }
+.hero .text {
+    animation: slideInFromTheLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
 .hero .text h1 {
     font-size: 40px;
     font-weight: bold;
@@ -138,6 +143,9 @@ pre, code {
     width: 400px;
     justify-self: flex-end;
     z-index: 100;
+    animation: slideInFromTheRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 .hero .hero-form .form-base {
     margin: 30px 0;
@@ -172,6 +180,9 @@ pre, code {
 /* stats section styling */
 .stats {
     padding-top: 100px;
+    animation: slideInFromTheBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 .stats .heading {
     max-width: 500px;
@@ -336,5 +347,34 @@ pre, code {
 
 /* Animations */
 @keyframes slideInFromTheLeft {
-    
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromTheRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromTheTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes slideInFromTheBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
