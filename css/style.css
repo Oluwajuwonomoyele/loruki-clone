@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 :root {
     --primary: #047aed;
+    --secondary: #1c3fa8;
+    --dark-blue: #002240;
+    --light-grey: #f4f4f4;
     --black: #333;
     --white: #fff; 
 }
@@ -48,14 +51,22 @@ img {
     justify-content: space-between;
     align-items: center;
 }
+.navbar .logo {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 .navbar ul {
     display: flex;
-    gap: 30px
+    gap: 30px;
+    transition: all 0.3s ease-out;
 }
 .navbar ul a {
     padding: 10px;
     color: var(--white);
     position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 .navbar ul a::after {
     content: '';
@@ -71,6 +82,29 @@ img {
 .navbar ul a:hover::after {
     height: 2px;
 }
+.navbar .bars {
+    display: none;
+}
+.navbar .bars .bar {
+    width: 40px;
+    margin-bottom: 6px;
+    height: 4px;
+    background-color: var(--white);
+    border-radius: 3px;
+    transition: all 0.3s ease-out;
+}
+.navbar .bars .bar.active:nth-child(1) {
+    transform: translateY(20px) rotate(45deg);
+
+}
+.navbar .bars .bar.active:nth-child(2) {
+    opacity: 0; 
+}
+.navbar .bars .bar.active:nth-child(3) {
+    transform: translateX(0px) rotate(-45deg);
+    
+}
+
 
 /* hero section styling */
 .hero {
@@ -87,9 +121,11 @@ img {
 }
 .hero .text h1 {
     font-size: 40px;
+    font-weight: bold;
 }
 .hero .text p {
     margin: 20px 0;
+    font-size: 20px;
 }
 .hero .hero-form {
     position: relative;
@@ -157,4 +193,49 @@ img {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
 
+}
+
+/* cloud section styling */
+.cloud{
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1.5rem 0;
+}
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
+/* languages section styling */
+.languages .flex {
+    flex-wrap: wrap;
+}
+.languages .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: all 0.3s ease;
+}
+.languages .card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.languages .card:hover {
+    transform: translateY(-15px);
+}
+
+/* footer section styling */
+.footer {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+}
+.footer a {
+    color: var(--white);
+}
+.footer h1 {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.footer .social a {
+    margin: 0 10px;
 }
