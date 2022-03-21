@@ -105,11 +105,20 @@
     .docs-hero h1 {
         font-size: 3rem;
     }
+    .docs-grid .grid > *:first-child {
+        animation: slideInFromTheBottom;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
 }
 
 @media (max-width: 375px) {
     .docs-hero h1 {
         font-size: 2.5rem;
+    }
+    .features-sub-hero img  {
+        width: 100%;
+        justify-self: flex-end;
     }
 
 }
